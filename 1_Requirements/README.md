@@ -8,9 +8,4 @@ Features are:
 *Cancel tickets
 
 
-Requirements
 
-*High level Requirements
-
-
-*Low level Requirements
