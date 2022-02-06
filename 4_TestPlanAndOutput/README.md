@@ -1,1 +1,1 @@
-Test and Output
+Test & output
