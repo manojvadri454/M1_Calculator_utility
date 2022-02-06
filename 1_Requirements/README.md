@@ -4,8 +4,8 @@ The main goal of this project is to provide various types of customer facilities
 
 Features are:
 
-*Booking tickets
+*Booking Tickets
 
-*Cancel tickets
+*Cancel Tickets
 
 
