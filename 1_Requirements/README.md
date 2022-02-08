@@ -1,12 +1,50 @@
-Discription
+# Introduction
+The main aim is to provide information of movie ticket so that customer can book the tickets accordingly.The project has been developed to carry out process easily and quickly.The system enables the user to Book tickets,Cancel tickets,View all booking records.
 
-The main goal of this project is to provide various types of customer facilities and provide good customer service.
-
-Features are:
-
-*Booking Tickets
-
-*Cancel Tickets
+# Research
+Cinemas help in contributing to our daily memories as they provide an essential part of our culture,going to cinemas has been the culture of almost all the families of today’s generation. It is a time when the family can spend some time altogether by stealing some hours from their busy schedule. Movie Ticket Booking System provides the customers facility to book tickets for a movie and to gather information about the movies and theaters.Customers can book ticket of his choice and may cancel a ticket
 
 
+# Features
+ 1.Booking tickets
 
+ 2.Cancel tickets
+
+ 3.Pricing of ticket
+
+ 4.View all booking records
+
+# Benefits
+ 1.User Friendly
+
+ 2.Provides flexibility
+
+ 3.Can Select the seats as per convience
+
+# Defining our system
+
+Our system have some inbuilt features for user and admin :-
+ ## Admin 
+ * Login.
+ * Can Change Price of a Ticket. 
+ * Can View the Reserved Tickets. 
+ * Exit System. 
+ ## User 
+ * Login.
+ * View the Movies Avaliable. 
+ * Purchase a Ticket. 
+ * View the avaliable seats. 
+ * Cancel a Ticket. 
+ * Exit System.
+
+# SWOT Analysis
+![swot](https://user-images.githubusercontent.com/46933088/153005667-325c747e-6e16-4547-9adf-2092c59db05f.png)
+
+# 4W's and 1'H
+
+
+# Detail requirements
+## High Level Requirements:
+
+
+## Low level Requirements:
