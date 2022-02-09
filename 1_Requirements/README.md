@@ -41,10 +41,36 @@ Our system have some inbuilt features for user and admin :-
 ![swot](https://user-images.githubusercontent.com/46933088/153005667-325c747e-6e16-4547-9adf-2092c59db05f.png)
 
 # 4W's and 1'H
+## Who
+* Theater.
 
+## What
+* To bulid a system to book ticket,cancel ticket,view reserverd seats,change price of ticket(admin only).
+
+## When
+* When user wants to carry out the tasks quickly and this reduces manual work and saves time.
+
+## Where
+* This issue is in all parts of the world in theater where there is a lot of booking,cancellation of tickets happening in all the time.
+
+## How
+* By creating a system which will provide all the functionalities required,the booking of, cancelling of the tickes and other actions will be take more time and system needs more workers for these actions
 
 # Detail requirements
-## High Level Requirements:
 
+## High Level Requirements
 
-## Low level Requirements:
+* HR01	User shall be able to login to the system.	
+* HR02	User shall be able to purchase a ticket.
+* HR03	User shall be able to get summary of the ticket booked.	
+* HR04	User shall be able to cancel a ticket.	
+* HR05	User shall be able to view the reserved seats.	
+
+## Low level Requirements
+
+* LR01	User shall be able to login to the system with correct login details.	
+* LR02	If appropriate login details are not entered a message is displayed -"wrong password".	
+* LR03	Displaying the movies available.
+* LR04	Admin can change the price for the movie.	
+* LR05	If user specifies seat number which is booked ,message appears that the seat is unavaliable.	
+* LR06	Displaying the summary of the ticket booked.
