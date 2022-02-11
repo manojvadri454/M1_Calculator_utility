@@ -1,12 +1,4 @@
 # M1_MovieTicket_utility
 
 
-##Milestone-1
-
-*Idea
-
-*Requirements
-
-*Design
-
-*Test plan
+https://app.codiga.io/public/project/31130/M1_MovieTicket_utility/dashboard
