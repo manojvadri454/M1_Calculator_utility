@@ -1,7 +1,7 @@
 /**
  * @file function.h
  * @author Manojkumar_vadri
- * @brief 
+ * @brief Movie ticket booking we have admin and user where user can book ticket and also cancel it for admin he can change ticket price and update movies.
  * @version 0.1
  * @date 2022-02-10
  * 

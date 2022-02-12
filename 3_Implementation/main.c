@@ -16,6 +16,7 @@ int main()
 	int x;
 	char pass[10],pak[10]="user";
 while(x!=3)
+
 	{
         a:choice=enterchoice();
 		switch(choice)
