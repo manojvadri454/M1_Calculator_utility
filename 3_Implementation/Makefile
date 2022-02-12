@@ -1,64 +1,69 @@
-PROJ_NAME = Movie_Ticket_Booking_System
-SRC = main.c\
-src/cancel.c\
-src/choice1.c\
-src/cmovie.c\
-src/details.c\
-src/movie.c\
-src/moviedetails.c\
-src/price.c\
-src/reservation.c\
-src/tic1.c\
-src/tic2.c\
-src/tic3.c
+########################################################################
+####################### Makefile Template ##############################
+########################################################################
 
+# Compiler settings - Can be customized.
+CC = gcc
+CXXFLAGS = -std=c11 -Wall
+LDFLAGS = 
 
-TEST_SRC =src/changepriceticket.c\
-src/test.c\
-unity/unity.c 
-  
-#To check if the OS is windows or linux and set the executable file extension and delete command accordingly
-ifdef OS
-   RM = del /q
-   FixPath = $(subst /,\,$1)
-   EXEC = exe
-else
-   ifeq ($(shell uname), Linux)
-      RM = rm -rf
-      FixPath = $1
-	  EXEC = out
-   endif
-endif
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).$(EXEC)
-INC	= -Iinc\
--Iunity
+# Makefile settings - Can be customized.
+APPNAME = MovieTicketBooking
+EXT = .c
+SRCDIR = /mnt/g/M1_Program_utility/3_Implementation
+OBJDIR = obj
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
+############## Do not change anything from here downwards! #############
+SRC = $(wildcard $(SRCDIR)/*$(EXT))
+OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
+DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
+# UNIX-based OS variables & settings
+RM = rm
+DELOBJ = $(OBJ)
+# Windows OS variables & settings
+DEL = del
+EXE = .exe
+WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 
+########################################################################
+####################### Targets beginning here #########################
+########################################################################
 
-run: all
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+all: $(APPNAME)
 
-# Build and run of Unit test
+# Builds the app
+$(APPNAME): $(OBJ)
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-build_test:
-	gcc $(TEST_SRC) $(INC) $(INCLUDE_LIBS) -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
+# Creates the dependecy rules
+%.d: $(SRCDIR)/%$(EXT)
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-run_test: build_test
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+# Includes all .h files
+-include $(DEP)
 
-analyze: test memcheck staticcheck coverage sanitize_check
+# Building rule for .o files and its .c/.cpp in combination with all .h
+$(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
-staticcheck:
-	cppcheck --enable=all -iunity .
-
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
-
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) 
-	./$(TEST_OUTPUT)
-
+################### Cleaning rules for Unix-based OS ###################
+# Cleans complete project
+.PHONY: clean
 clean:
-	$(RM) $(call FixPath,$(PROJ_NAME).$(EXEC))
+	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
+
+# Cleans only all files with the extension .d
+.PHONY: cleandep
+cleandep:
+	$(RM) $(DEP)
+
+#################### Cleaning rules for Windows OS #####################
+# Cleans complete project
+.PHONY: cleanw
+cleanw:
+	$(DEL) $(WDELOBJ) $(DEP) $(APPNAME)$(EXE)
+
+# Cleans only all files with the extension .d
+.PHONY: cleandepw
+cleandepw:
+	$(DEL) $(DEP)

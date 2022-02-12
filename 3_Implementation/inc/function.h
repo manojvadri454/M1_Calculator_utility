@@ -1,6 +1,6 @@
 /**
  * @file function.h
- * @author Manojkumar_vadri (you@domain.com)
+ * @author Manojkumar_vadri
  * @brief 
  * @version 0.1
  * @date 2022-02-10
