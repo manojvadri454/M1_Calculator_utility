@@ -93,7 +93,7 @@ Our system have some inbuilt features for user and admin :-
 # Test Plan
 
 | **Test ID** | **HLT ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |   
-|-------------|-----|--------------------------------------------------------------|------------|-------------|----------------|------------------|
+|-------------|-----|--------------------------------------------------------------|------------|-------------|----------------|
 |  T_01|H_01| Provide required details for login to book a ticket| password| Successfully logined In | Successfully logined In| 
 |  T_02|H_01| When wrong password is entered| Password|  Entered Password is wrong | Entered Password is wrong | 
 |  T_03|H_02|Display the  details of movie available|  Enter choice | Display list | Display list | 
