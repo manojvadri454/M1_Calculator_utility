@@ -59,18 +59,20 @@ Our system have some inbuilt features for user and admin :-
 # Detail requirements
 
 ## High Level Requirements
-
-* HR01	User shall be able to login to the system.	
-* HR02	User shall be able to purchase a ticket.
-* HR03	User shall be able to get summary of the ticket booked.	
-* HR04	User shall be able to cancel a ticket.	
-* HR05	User shall be able to view the reserved seats.	
+|Id| Descripition|
+|--|-------------------------|
+|HR01	| User shall be able to login to the system.|
+|HR02	| User shall be able to purchase a ticket.|
+|HR03	| User shall be able to get summary of the ticket booked.|
+|HR04	| User shall be able to cancel a ticket.|
+|HR05 |	User shall be able to view the reserved seats.|
 
 ## Low level Requirements
-
-* LR01	User shall be able to login to the system with correct login details.	
-* LR02	If appropriate login details are not entered a message is displayed -"wrong password".	
-* LR03	Displaying the movies available.
-* LR04	Admin can change the price for the movie.	
-* LR05	If user specifies seat number which is booked ,message appears that the seat is unavaliable.	
-* LR06	Displaying the summary of the ticket booked.
+|Id| Descripition|
+|--|----------------------|
+|LR01|	User shall be able to login to the system with correct login details.	|
+ |LR02|	If appropriate login details are not entered a message is displayed -"wrong password".|	
+ |LR03|	Displaying the movies available.|
+ |LR04|	Admin can change the price for the movie.	|
+ |LR05|	If user specifies seat number which is booked ,message appears that the seat is unavaliable.	|
+| LR06|	Displaying the summary of the ticket booked.|
